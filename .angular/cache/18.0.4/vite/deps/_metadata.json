@@ -1,46 +1,52 @@
 {
-  "hash": "75464bcb",
-  "configHash": "36055d6b",
+  "hash": "aff7acd3",
+  "configHash": "b308562b",
   "lockfileHash": "695de422",
-  "browserHash": "e72bd296",
+  "browserHash": "f18c3cf6",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "20923f12",
+      "fileHash": "98a912d5",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "4c8f30e8",
+      "fileHash": "8f2f43f2",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "3307334a",
+      "fileHash": "79bda7eb",
       "needsInterop": false
     },
     "@angular/platform-browser/animations/async": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations/async.mjs",
       "file": "@angular_platform-browser_animations_async.js",
-      "fileHash": "6488486c",
+      "fileHash": "07ba9c00",
+      "needsInterop": false
+    },
+    "@angular/material/toolbar": {
+      "src": "../../../../../node_modules/@angular/material/fesm2022/toolbar.mjs",
+      "file": "@angular_material_toolbar.js",
+      "fileHash": "d7c032b1",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-6QMGHWSZ": {
-      "file": "chunk-6QMGHWSZ.js"
+    "chunk-4VZNQMR3": {
+      "file": "chunk-4VZNQMR3.js"
     },
-    "browser-U2QUZPHU": {
-      "file": "browser-U2QUZPHU.js"
+    "browser-DWKJNVXJ": {
+      "file": "browser-DWKJNVXJ.js"
     },
-    "chunk-JXFKCVF2": {
-      "file": "chunk-JXFKCVF2.js"
+    "chunk-5IYSAHWT": {
+      "file": "chunk-5IYSAHWT.js"
     },
-    "chunk-HAGLB4B3": {
-      "file": "chunk-HAGLB4B3.js"
+    "chunk-Z2L5ZUZL": {
+      "file": "chunk-Z2L5ZUZL.js"
     }
   }
 }
