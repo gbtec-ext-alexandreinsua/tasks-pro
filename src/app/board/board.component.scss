@@ -1,6 +1,12 @@
 :host {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   width: 80%;
-  height: 100%;
   margin: 0 auto;
+
+  .create-task-button {
+    padding: 1em 0;
+    align-self: flex-end;
+  }
 }
