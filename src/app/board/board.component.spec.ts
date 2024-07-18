@@ -20,4 +20,14 @@ describe('BoardComponent', () => {
     const createTaskButton = fixture.debugElement.query(By.css('.create-task-button'))?.nativeElement;
     expect(createTaskButton).toBeTruthy();
   });
+
+  it('should call showTaskDialog when create task button clicked', async () => {
+    const showTaskDialogSpy = jest.spyOn(component, 'showTaskDialog');
+    const createTaskButton = fixture.debugElement.query(By.css('.create-task-button'))?.nativeElement;
+    expect(createTaskButton).toBeTruthy();
+
+    createTaskButton.click();
+
+    expect(showTaskDialogSpy).toHaveBeenCalled();
+  });
 });
