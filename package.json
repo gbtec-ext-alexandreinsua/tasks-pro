@@ -23,6 +23,8 @@
     "@angular/platform-browser": "18.0.3",
     "@angular/platform-browser-dynamic": "18.0.3",
     "@angular/router": "18.0.3",
+    "@ngx-formly/core": "6.3.6",
+    "@ngx-formly/material": "6.3.6",
     "rxjs": "6.6.0",
     "tslib": "2.3.0",
     "zone.js": "0.14.7"
@@ -36,6 +38,7 @@
     "@angular-eslint/template-parser": "18.1.0",
     "@angular/cli": "18.0.4",
     "@angular/compiler-cli": "18.0.3",
+    "@ngx-formly/schematics": "6.3.6",
     "@types/jest": "29.5.12",
     "@types/node": "12.11.1",
     "@typescript-eslint/eslint-plugin": "7.11.0",
