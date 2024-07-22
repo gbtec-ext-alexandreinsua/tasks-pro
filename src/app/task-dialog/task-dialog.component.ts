@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { FormlyFieldConfig, FormlyModule } from '@ngx-formly/core';
 import { FormlyMaterialModule } from '@ngx-formly/material';
@@ -16,6 +16,8 @@ import { ITask, TaskStatesEnum } from '../model/task.interface';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TaskDialogComponent {
+  readonly dialogRef = inject(MatDialogRef<TaskDialogComponent>);
+
   form = new FormGroup({});
   model: ITask = { title: '', description: '', status: TaskStatesEnum.TODO, createAt: new Date().getTime() };
   fields: FormlyFieldConfig[] = [
@@ -43,6 +45,6 @@ export class TaskDialogComponent {
   ];
 
   onSubmit(model: ITask) {
-    if (this.form.valid) console.log(model);
+    if (this.form.valid) this.dialogRef.close(model);
   }
 }
