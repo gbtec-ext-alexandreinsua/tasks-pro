@@ -5,7 +5,7 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { FormlyFieldConfig, FormlyModule } from '@ngx-formly/core';
 import { FormlyMaterialModule } from '@ngx-formly/material';
-import { ITask, TaskStatesEnum } from '../model/task.interface';
+import { ITask, TaskStatesEnum } from '../../model/task.interface';
 
 @Component({
   selector: 'app-task-dialog',

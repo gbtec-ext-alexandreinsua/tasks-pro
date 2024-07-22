@@ -1,0 +1,9 @@
+:host {
+  mat-card {
+    cursor: move;
+
+    &:active {
+      border-color: lightcoral;
+    }
+  }
+}
