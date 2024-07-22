@@ -5,7 +5,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { FormlyFieldConfig, FormlyModule } from '@ngx-formly/core';
 import { FormlyMaterialModule } from '@ngx-formly/material';
-import { ITask } from '../interfaces/task.interface';
+import { ITask, TaskStatesEnum } from '../model/task.interface';
 
 @Component({
   selector: 'app-task-dialog',
@@ -17,7 +17,7 @@ import { ITask } from '../interfaces/task.interface';
 })
 export class TaskDialogComponent {
   form = new FormGroup({});
-  model: ITask = { title: '', description: '' };
+  model: ITask = { title: '', description: '', status: TaskStatesEnum.TODO, createAt: new Date().getTime() };
   fields: FormlyFieldConfig[] = [
     {
       key: 'title',
@@ -25,7 +25,8 @@ export class TaskDialogComponent {
       props: {
         label: 'Title',
         placeholder: 'Task title',
-        required: true
+        required: true,
+        minLength: 5
       }
     },
     {
@@ -35,12 +36,13 @@ export class TaskDialogComponent {
         label: 'Description',
         placeholder: 'Task description',
         required: true,
-        rows: 10
+        rows: 10,
+        minLength: 10
       }
     }
   ];
 
   onSubmit(model: ITask) {
-    console.log(model);
+    if (this.form.valid) console.log(model);
   }
 }
