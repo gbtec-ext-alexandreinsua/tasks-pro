@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ITask } from 'src/app/model/task.interface';
 import { TaskCardComponent } from '../task-card/task-card.component';
 
 @Component({
@@ -8,4 +9,6 @@ import { TaskCardComponent } from '../task-card/task-card.component';
   templateUrl: './task-list-wrapper.component.html',
   styleUrl: './task-list-wrapper.component.scss'
 })
-export class TaskListWrapperComponent {}
+export class TaskListWrapperComponent {
+  @Input() tasks!: ITask[];
+}
