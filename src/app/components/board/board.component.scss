@@ -1,0 +1,11 @@
+:host {
+  width: 80%;
+  flex-grow: 1;
+  margin: 0 auto;
+
+  .create-task-button {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+  }
+}
