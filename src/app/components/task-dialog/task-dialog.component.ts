@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
@@ -12,8 +12,7 @@ import { ITask, TaskStatesEnum } from '../../model/task.interface';
   standalone: true,
   imports: [FormlyModule, FormlyMaterialModule, MatButtonModule, MatDialogModule, MatIconModule, ReactiveFormsModule],
   templateUrl: './task-dialog.component.html',
-  styleUrl: './task-dialog.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './task-dialog.component.scss'
 })
 export class TaskDialogComponent {
   readonly dialogRef = inject(MatDialogRef<TaskDialogComponent>);

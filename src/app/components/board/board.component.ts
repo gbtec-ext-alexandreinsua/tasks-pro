@@ -28,8 +28,8 @@ export class BoardComponent {
     const dialogRef = this.dialog.open(TaskDialogComponent);
     dialogRef.afterClosed().subscribe((task: ITask) => {
       if (task) {
-        console.log(`Dialog result: ${task.title}`);
         this.taskRepository.save(task);
+        this.tasks = [...this.taskRepository.tasks];
       }
     });
   }
