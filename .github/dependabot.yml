@@ -3,6 +3,8 @@ registries:
   public-npm-registry:
     type: npm-registry
     url: https://registry.npmjs.org/
+    username: ''
+    password: ''
 updates:
   - package-ecosystem: npm
     directory: /
