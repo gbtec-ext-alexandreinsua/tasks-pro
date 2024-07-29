@@ -6,6 +6,8 @@ registries:
 updates:
   - package-ecosystem: npm
     directory: /
+    registries:
+      - public-npm-registry
     schedule:
       interval: weekly
       day: sunday
