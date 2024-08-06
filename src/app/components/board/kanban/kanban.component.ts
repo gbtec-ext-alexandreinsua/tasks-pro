@@ -18,7 +18,7 @@ export class KanbanComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes);
     this.tasksList = [
-      { title: 'Pending', tasks: this.assigTask(TaskStatesEnum.TODO) },
+      { title: 'Pending', tasks: this.assigTask(TaskStatesEnum.PENDING) },
       { title: 'In progress', tasks: this.assigTask(TaskStatesEnum.ACTIVE) },
       { title: 'Finished', tasks: this.assigTask(TaskStatesEnum.DONE) }
     ];

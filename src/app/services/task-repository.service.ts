@@ -8,13 +8,14 @@ export class TaskRepositoryService {
   private TASK_KEY = 'TASKS';
   private _tasks: ITask[];
 
-  constructor() {
+    constructor() {
     this._tasks = JSON.parse(localStorage.getItem(this.TASK_KEY) || '[]');
   }
 
   get tasks(): ITask[] {
     return this._tasks;
   }
+  
 
   save(task: ITask) {
     this._tasks.push(task);

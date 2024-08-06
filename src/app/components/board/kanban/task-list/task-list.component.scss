@@ -1,5 +1,6 @@
 :host {
+  background-color: #f1f1ff;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex: 0 0 calc(100% / 3);
 }
