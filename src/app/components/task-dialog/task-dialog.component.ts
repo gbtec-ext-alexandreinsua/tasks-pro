@@ -18,7 +18,7 @@ export class TaskDialogComponent {
   readonly dialogRef = inject(MatDialogRef<TaskDialogComponent>);
 
   form = new FormGroup({});
-  model: ITask = { title: '', description: '', status: TaskStatesEnum.TODO, createAt: new Date().getTime() };
+  model: ITask = { title: '', description: '', status: TaskStatesEnum.PENDING, createAt: new Date().getTime() };
   fields: FormlyFieldConfig[] = [
     {
       key: 'title',
@@ -37,7 +37,7 @@ export class TaskDialogComponent {
         label: 'Description',
         placeholder: 'Task description',
         required: true,
-        rows: 10,
+        rows: 5,
         minLength: 10
       }
     }

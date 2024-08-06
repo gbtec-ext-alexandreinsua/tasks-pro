@@ -6,7 +6,7 @@ export interface ITask {
 }
 
 export enum TaskStatesEnum {
-  TODO = 'todo',
+  PENDING = 'pending',
   ACTIVE = 'active',
   DONE = 'done'
 }
