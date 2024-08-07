@@ -26,6 +26,10 @@ export class TaskDialogComponent {
       props: {
         label: 'Title',
         placeholder: 'Task title',
+        attributes: {
+          autocomplete: 'off'
+        },
+        appearance: 'outline',
         required: true,
         minLength: 5
       }
@@ -36,6 +40,10 @@ export class TaskDialogComponent {
       props: {
         label: 'Description',
         placeholder: 'Task description',
+        attributes: {
+          autocomplete: 'off'
+        },
+        appearance: 'outline',
         required: true,
         rows: 5,
         minLength: 10
@@ -44,6 +52,7 @@ export class TaskDialogComponent {
   ];
 
   onSubmit(model: ITask) {
+    console.log(this.form);
     if (this.form.valid) this.dialogRef.close(model);
   }
 }
