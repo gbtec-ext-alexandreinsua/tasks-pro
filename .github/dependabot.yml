@@ -1,7 +1,15 @@
 version: 2
+registries:
+  gbtec-npm-registry:
+    type: npm-registry
+    url: https://gbtec.jfrog.io/gbtec/api/npm/npm
+    username: "${{secrets.GBTEC_JFROG_USERNAME}}"
+    password: "${{secrets.GBTEC_JFROG_PASSWORD}}"
 updates:
   - package-ecosystem: npm
     directory: /
+    registries:
+    - gbtec-npm-registry
     schedule:
       interval: weekly
       day: sunday

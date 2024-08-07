@@ -1,6 +1,7 @@
 :host {
   mat-card {
     cursor: move;
+    min-width: 275px;
 
     &:active {
       border-color: lightcoral;
