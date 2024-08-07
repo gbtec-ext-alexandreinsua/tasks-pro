@@ -1,6 +1,7 @@
 :host {
-  background-color: #f1f1ff;
   display: flex;
   flex-direction: column;
-  flex: 0 0 calc(100% / 3);
+  flex: 1 0 275px;
+  padding: 0.5em;
+  background-color: #f1f1ff;
 }
