@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { ITask, TaskStatesEnum } from 'src/app/model/task.interface';
+import { ITask } from 'src/app/model/task.interface';
 import { ITaskList } from 'src/app/model/taskList.interface';
 import { TaskListComponent } from './task-list/task-list.component';
 
@@ -11,19 +11,18 @@ import { TaskListComponent } from './task-list/task-list.component';
   styleUrl: './kanban.component.scss'
 })
 export class KanbanComponent implements OnChanges {
-  @Input() tasks!: ITask[];
+  @Input() pendingTasks!: ITask[];
+  @Input() activeTasks!: ITask[];
+  @Input() doneTasks!: ITask[];
 
   tasksList!: ITaskList[];
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes);
     this.tasksList = [
-      { title: 'Pending', tasks: this.assigTask(TaskStatesEnum.PENDING) },
-      { title: 'In progress', tasks: this.assigTask(TaskStatesEnum.ACTIVE) },
-      { title: 'Finished', tasks: this.assigTask(TaskStatesEnum.DONE) }
+      { title: 'Pending', tasks: this.pendingTasks },
+      { title: 'In progress', tasks: this.activeTasks },
+      { title: 'Finished', tasks: this.doneTasks }
     ];
-  }
-  private assigTask(status: TaskStatesEnum) {
-    return this.tasks?.filter(task => task.status === status);
   }
 }

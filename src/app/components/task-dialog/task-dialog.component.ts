@@ -18,7 +18,13 @@ export class TaskDialogComponent {
   readonly dialogRef = inject(MatDialogRef<TaskDialogComponent>);
 
   form = new FormGroup({});
-  model: ITask = { title: '', description: '', status: TaskStatesEnum.PENDING, createAt: new Date().getTime() };
+  model: ITask = {
+    title: 'My task',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, repellat consequuntur? Nostrum sit, alias autem quo maxime quis vitae perferendis porro explicabo. Fugiat modi aut provident accusantium blanditiis dolores illo!',
+    status: TaskStatesEnum.PENDING,
+    createAt: new Date().getTime()
+  };
   fields: FormlyFieldConfig[] = [
     {
       key: 'title',
@@ -26,6 +32,10 @@ export class TaskDialogComponent {
       props: {
         label: 'Title',
         placeholder: 'Task title',
+        attributes: {
+          autocomplete: 'off'
+        },
+        appearance: 'outline',
         required: true,
         minLength: 5
       }
@@ -36,6 +46,10 @@ export class TaskDialogComponent {
       props: {
         label: 'Description',
         placeholder: 'Task description',
+        attributes: {
+          autocomplete: 'off'
+        },
+        appearance: 'outline',
         required: true,
         rows: 5,
         minLength: 10

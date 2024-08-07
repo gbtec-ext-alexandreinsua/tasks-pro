@@ -14,7 +14,10 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(
       ReactiveFormsModule,
       FormlyModule.forRoot({
-        validationMessages: [{ name: 'minLength', message: minLengthValidationMessage }]
+        validationMessages: [
+          { name: 'required', message: 'This field is required' },
+          { name: 'minLength', message: minLengthValidationMessage }
+        ]
       }),
       FormlyMaterialModule
     ),
