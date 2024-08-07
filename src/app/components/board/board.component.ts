@@ -18,10 +18,13 @@ export class BoardComponent {
   readonly dialog = inject(MatDialog);
   readonly taskRepository = inject(TaskRepositoryService);
 
-  tasks!: ITask[];
+  // tasks!: ITask[];
+  pendingTasks!: ITask[];
+  activeTasks!: ITask[];
+  doneTasks!: ITask[];
 
   constructor() {
-    this.tasks = this.taskRepository.tasks;
+    this.pendingTasks = this.taskRepository.pendingTasks;
   }
 
   showTaskDialog() {
@@ -29,7 +32,9 @@ export class BoardComponent {
     dialogRef.afterClosed().subscribe((task: ITask) => {
       if (task) {
         this.taskRepository.save(task);
-        this.tasks = [...this.taskRepository.tasks];
+        this.pendingTasks = [...this.taskRepository.pendingTasks];
+        this.activeTasks = [...this.taskRepository.activeTasks];
+        this.doneTasks = [...this.taskRepository.doneTasks];
       }
     });
   }
