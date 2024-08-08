@@ -1,4 +1,4 @@
-<mat-card appearance="outlined" cdkDrag>
+<mat-card appearance="outlined" cdkDrag [cdkDragData]="task">
   <mat-card-header>
     <mat-card-title>{{ task.title }}</mat-card-title>
     <mat-card-subtitle>{{ task.createAt | date : 'dd/MM/yy' }}</mat-card-subtitle>

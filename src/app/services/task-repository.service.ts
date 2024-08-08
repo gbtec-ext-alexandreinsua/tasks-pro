@@ -18,11 +18,11 @@ export class TaskRepositoryService {
   }
 
   get activeTasks(): ITask[] {
-    return this._tasks.filter((task: ITask) => task.status === TaskStatesEnum.PENDING);
+    return this._tasks.filter((task: ITask) => task.status === TaskStatesEnum.ACTIVE);
   }
 
   get doneTasks(): ITask[] {
-    return this._tasks.filter((task: ITask) => task.status === TaskStatesEnum.PENDING);
+    return this._tasks.filter((task: ITask) => task.status === TaskStatesEnum.DONE);
   }
 
   saveTask(task: ITask) {

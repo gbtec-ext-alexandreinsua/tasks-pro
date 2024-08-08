@@ -1,3 +1,5 @@
-@for (list of tasksList; track $index) {
-<app-task-list [title]="list.title" [tasks]="list.tasks" (orderedTaskList)="saveOrderedTasksList($event)" />
-}
+<div cdkDropListGroup>
+  <app-task-list [title]="'Pending'" [tasks]="pendingTasks" (orderedTaskList)="saveOrderedTasksList($event)" />
+  <app-task-list [title]="'In progress'" [tasks]="activeTasks" (orderedTaskList)="saveOrderedTasksList($event)" />
+  <app-task-list [title]="'Finished'" [tasks]="doneTasks" (orderedTaskList)="saveOrderedTasksList($event)" />
+</div>

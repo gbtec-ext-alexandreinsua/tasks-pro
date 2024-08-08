@@ -1,4 +1,9 @@
-<app-kanban [pendingTasks]="pendingTasks" (saveOrderedTaskList)="safeList($event)"/>
+<app-kanban
+  [pendingTasks]="pendingTasks"
+  [activeTasks]="activeTasks"
+  [doneTasks]="doneTasks"
+  (saveOrderedTaskList)="safeList($event)"
+/>
 <button class="create-task-button" mat-fab aria-label="s" (click)="showTaskDialog()">
   <mat-icon>add</mat-icon>
 </button>

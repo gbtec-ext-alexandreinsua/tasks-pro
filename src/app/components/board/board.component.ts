@@ -24,6 +24,8 @@ export class BoardComponent {
 
   constructor() {
     this.pendingTasks = this.taskRepository.pendingTasks;
+    this.activeTasks = this.taskRepository.activeTasks;
+    this.doneTasks = this.taskRepository.doneTasks;
   }
 
   showTaskDialog() {
