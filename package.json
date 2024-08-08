@@ -27,6 +27,7 @@
     "@ngx-formly/material": "6.3.6",
     "rxjs": "7.8.1",
     "tslib": "2.3.0",
+    "uuid": "10.0.0",
     "zone.js": "0.14.7"
   },
   "devDependencies": {
@@ -41,8 +42,9 @@
     "@ngx-formly/schematics": "6.3.6",
     "@types/jest": "29.5.12",
     "@types/node": "12.11.1",
+    "@types/uuid": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "8.0.1",
-    "@typescript-eslint/parser": "7.11.0",
+    "@typescript-eslint/parser": "8.0.1",
     "eslint": "8.57.0",
     "jest": "29.7.0",
     "jest-preset-angular": "14.2.2",

@@ -2,6 +2,20 @@
   mat-card {
     cursor: move;
     min-width: 275px;
+    mat-card-title {
+      font-size: 1em;
+      font-weight: 500;
+    }
+    mat-card-subtitle {
+      font-size: 0.9em;
+      font-weight: 400;
+    }
+
+    mat-card-content > p {
+      font-size: 0.85em;
+      text-align: justify;
+      line-height: 1.5em;
+    }
 
     &:active {
       border-color: lightcoral;

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { ITask, TaskStatesEnum } from '../model/task.interface';
 
+import * as uuid from 'uuid';
+import { ITask, TaskStatesEnum } from '../model/task.interface';
 @Injectable({
   providedIn: 'root'
 })
@@ -25,8 +26,8 @@ export class TaskRepositoryService {
   }
 
   save(task: ITask) {
+    task.id = uuid.v4();
     this._tasks.push(task);
     localStorage.setItem(this.TASK_KEY, JSON.stringify(this._tasks));
   }
 }
-

@@ -19,6 +19,7 @@ export class TaskDialogComponent {
 
   form = new FormGroup({});
   model: ITask = {
+    id: '',
     title: 'My task',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, repellat consequuntur? Nostrum sit, alias autem quo maxime quis vitae perferendis porro explicabo. Fugiat modi aut provident accusantium blanditiis dolores illo!',
