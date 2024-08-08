@@ -1,5 +1,5 @@
 import { CdkDragDrop, CdkDropList, moveItemInArray } from '@angular/cdk/drag-drop';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ITask } from 'src/app/model/task.interface';
 import { TaskCardComponent } from '../task-card/task-card.component';
 
@@ -12,9 +12,10 @@ import { TaskCardComponent } from '../task-card/task-card.component';
 })
 export class TaskListWrapperComponent {
   @Input() tasks!: ITask[];
+  @Output() movedTask = new EventEmitter<ITask[]>();
 
   drop(event: CdkDragDrop<ITask[]>): void {
     moveItemInArray(this.tasks, event.previousIndex, event.currentIndex);
-    // todo: save the tasks order
+    this.movedTask.emit(this.tasks);
   }
 }

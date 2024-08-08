@@ -25,9 +25,15 @@ export class TaskRepositoryService {
     return this._tasks.filter((task: ITask) => task.status === TaskStatesEnum.PENDING);
   }
 
-  save(task: ITask) {
+  saveTask(task: ITask) {
     task.id = uuid.v4();
     this._tasks.push(task);
+    localStorage.setItem(this.TASK_KEY, JSON.stringify(this._tasks));
+  }
+
+  saveTaskList(tasks: ITask[]) {
+    this._tasks = this._tasks.filter(task => !tasks.includes(task));
+    this._tasks.push(...tasks);
     localStorage.setItem(this.TASK_KEY, JSON.stringify(this._tasks));
   }
 }

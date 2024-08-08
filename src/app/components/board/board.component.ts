@@ -18,7 +18,6 @@ export class BoardComponent {
   readonly dialog = inject(MatDialog);
   readonly taskRepository = inject(TaskRepositoryService);
 
-  // tasks!: ITask[];
   pendingTasks!: ITask[];
   activeTasks!: ITask[];
   doneTasks!: ITask[];
@@ -31,11 +30,14 @@ export class BoardComponent {
     const dialogRef = this.dialog.open(TaskDialogComponent);
     dialogRef.afterClosed().subscribe((task: ITask) => {
       if (task) {
-        this.taskRepository.save(task);
+        this.taskRepository.saveTask(task);
         this.pendingTasks = [...this.taskRepository.pendingTasks];
         this.activeTasks = [...this.taskRepository.activeTasks];
         this.doneTasks = [...this.taskRepository.doneTasks];
       }
     });
+  }
+  safeList(tasks: ITask[]) {
+    this.taskRepository.saveTaskList(tasks);
   }
 }
