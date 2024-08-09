@@ -32,7 +32,7 @@ export class BoardComponent {
     const dialogRef = this.dialog.open(TaskDialogComponent);
     dialogRef.afterClosed().subscribe((task: ITask) => {
       if (task) {
-        this.taskRepository.saveTask(task);
+        this.taskRepository.createTask(task);
         this.pendingTasks = [...this.taskRepository.pendingTasks];
         this.activeTasks = [...this.taskRepository.activeTasks];
         this.doneTasks = [...this.taskRepository.doneTasks];

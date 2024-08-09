@@ -1,6 +1,6 @@
 import { CdkDropListGroup } from '@angular/cdk/drag-drop';
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
-import { ITask } from 'src/app/model/task.interface';
+import { ITask, TaskStatesEnum } from 'src/app/model/task.interface';
 import { TaskListComponent } from './task-list/task-list.component';
 
 @Component({
@@ -14,6 +14,9 @@ export class KanbanComponent implements OnChanges {
   @Input() pendingTasks!: ITask[];
   @Input() activeTasks!: ITask[];
   @Input() doneTasks!: ITask[];
+
+  taskStatesEnum = TaskStatesEnum;
+
   @Output() saveOrderedTaskList = new EventEmitter<ITask[]>();
 
   ngOnChanges(changes: SimpleChanges): void {

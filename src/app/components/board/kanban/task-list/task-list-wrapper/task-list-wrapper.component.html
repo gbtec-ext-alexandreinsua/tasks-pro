@@ -1,4 +1,11 @@
-<div class="task-list-wrapoer" c cdkDropList [cdkDropListData]="tasks" (cdkDropListDropped)="drop($event)">
+<div
+  [id]="identifier"
+  class="task-list-wrapoer"
+  c
+  cdkDropList
+  [cdkDropListData]="tasks"
+  (cdkDropListDropped)="drop($event)"
+>
   @for (task of tasks; track $index) {
   <app-task-card [task]="task"></app-task-card>
   }

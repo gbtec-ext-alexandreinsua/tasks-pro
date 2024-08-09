@@ -1,5 +1,20 @@
 <div cdkDropListGroup>
-  <app-task-list [title]="'Pending'" [tasks]="pendingTasks" (orderedTaskList)="saveOrderedTasksList($event)" />
-  <app-task-list [title]="'In progress'" [tasks]="activeTasks" (orderedTaskList)="saveOrderedTasksList($event)" />
-  <app-task-list [title]="'Finished'" [tasks]="doneTasks" (orderedTaskList)="saveOrderedTasksList($event)" />
+  <app-task-list
+    [identifier]="taskStatesEnum.PENDING"
+    [title]="'Pending'"
+    [tasks]="pendingTasks"
+    (orderedTaskList)="saveOrderedTasksList($event)"
+  />
+  <app-task-list
+    [identifier]="taskStatesEnum.ACTIVE"
+    [title]="'In progress'"
+    [tasks]="activeTasks"
+    (orderedTaskList)="saveOrderedTasksList($event)"
+  />
+  <app-task-list
+    [identifier]="taskStatesEnum.DONE"
+    [title]="'Finished'"
+    [tasks]="doneTasks"
+    (orderedTaskList)="saveOrderedTasksList($event)"
+  />
 </div>

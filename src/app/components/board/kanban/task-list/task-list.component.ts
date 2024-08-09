@@ -11,6 +11,7 @@ import { TaskListWrapperComponent } from './task-list-wrapper/task-list-wrapper.
 })
 export class TaskListComponent {
   @Input() title!: string;
+  @Input() identifier!: string;
   @Input() tasks!: ITask[];
   @Output() orderedTaskList = new EventEmitter<ITask[]>();
 
