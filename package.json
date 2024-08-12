@@ -41,7 +41,7 @@
     "@angular/compiler-cli": "18.0.3",
     "@ngx-formly/schematics": "6.3.6",
     "@types/jest": "29.5.12",
-    "@types/node": "12.11.1",
+    "@types/node": "22.2.0",
     "@types/uuid": "10.0.0",
     "@typescript-eslint/eslint-plugin": "8.0.1",
     "@typescript-eslint/parser": "8.0.1",
