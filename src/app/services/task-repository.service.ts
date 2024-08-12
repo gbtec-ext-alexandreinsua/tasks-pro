@@ -32,7 +32,6 @@ export class TaskRepositoryService {
   }
 
   updateTask(updatedTask: ITask) {
-    console.log(updatedTask);
     this._tasks = this._tasks.filter(task => task.id != updatedTask.id);
     this._tasks.push(updatedTask);
     localStorage.setItem(this.TASK_KEY, JSON.stringify(this._tasks));

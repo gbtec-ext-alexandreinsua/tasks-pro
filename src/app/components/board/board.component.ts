@@ -34,8 +34,8 @@ export class BoardComponent {
       if (task) {
         this.taskRepository.createTask(task);
         this.pendingTasks = [...this.taskRepository.pendingTasks];
-        this.activeTasks = [...this.taskRepository.activeTasks];
-        this.doneTasks = [...this.taskRepository.doneTasks];
+        // this.activeTasks = [...this.taskRepository.activeTasks];
+        // this.doneTasks = [...this.taskRepository.doneTasks];
       }
     });
   }
